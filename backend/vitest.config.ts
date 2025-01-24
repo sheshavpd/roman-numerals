@@ -5,7 +5,7 @@ export default defineConfig({
     globals: true,
     environment: "node",
     coverage: {
-      provider: "istanbul", // Coverage provider
+      provider: "istanbul",
       reporter: ["text", "html"],
     },
   },

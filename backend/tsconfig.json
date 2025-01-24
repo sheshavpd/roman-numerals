@@ -9,6 +9,8 @@
   },
   "include": [
     "src/**/*.ts",
+    "node_modules/vitest/globals.d.ts",
+    "node_modules/vitest/globals.d.ts",
     "node_modules/vitest/globals.d.ts"
   ],
   "exclude": ["node_modules", "dist"]
