@@ -3,3 +3,8 @@
 **/*.env
 **/coverage
 .idea/
+.vscode/*
+
+# Logs
+**/dist-ssr
+**/*.local
