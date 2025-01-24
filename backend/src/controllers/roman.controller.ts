@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { RomanService } from '../services/roman.service';
+import { logger } from '../utils/logger';
 
 export class RomanController {
   private romanService: RomanService;
@@ -14,20 +15,20 @@ export class RomanController {
    */
   getRomanNumeral = (req: Request, res: Response): void => {
     const { query } = req.query;
+    logger.info(`Received query param: ${query}`);
 
-    // Check if "query" param is provided
     if (!query) {
-      res
-        .status(400)
-        .json({ error: 'Missing required query parameter "query".' });
+      const error = 'Missing required query parameter "query".';
+      logger.error(error);
+      res.status(400).json({ error });
       return;
     }
 
     const num = parseInt(query as string, 10);
     if (isNaN(num)) {
-      res
-        .status(400)
-        .json({ error: `Invalid input "${query}". Must be an integer.` });
+      const error = `Invalid input "${query}". Must be an integer.`;
+      logger.error(error);
+      res.status(400).json({ error });
       return;
     }
 
@@ -35,6 +36,7 @@ export class RomanController {
       const output = this.romanService.toRomanNumeral(num);
       res.json({ input: query, output });
     } catch (error) {
+      logger.error((error as Error).message);
       res.status(422).json({ error: (error as Error).message });
     }
   };
