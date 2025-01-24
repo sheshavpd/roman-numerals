@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import {
   httpRequestsTotal,
   httpRequestDurationSeconds,
-} from '../utils/metrics';
+} from '../utils/metrics.js';
 
 export const metricsMiddleware = (
   req: Request,

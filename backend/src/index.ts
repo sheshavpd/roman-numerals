@@ -1,9 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import romanRouter from './routes/roman.router';
-import { logger } from './utils/logger';
-import { register } from './utils/metrics';
-import { metricsMiddleware } from './middleware/metricsMiddleware';
+import romanRouter from './routes/roman.router.js';
+import { logger } from './utils/logger.js';
+import { register } from './utils/metrics.js';
+import { metricsMiddleware } from './middleware/metricsMiddleware.js';
 
 dotenv.config();
 

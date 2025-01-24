@@ -8,5 +8,6 @@ export default defineConfig({
       provider: 'istanbul',
       reporter: ['text', 'html'],
     },
+    include: ['src/**/*.ts'],
   },
 });

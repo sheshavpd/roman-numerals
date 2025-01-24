@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { RomanService } from '../services/roman.service';
-import { logger } from '../utils/logger';
+import { RomanService } from '../services/roman.service.js';
+import { logger } from '../utils/logger.js';
 
 export class RomanController {
   private romanService: RomanService;
