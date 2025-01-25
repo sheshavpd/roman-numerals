@@ -4,12 +4,14 @@ import romanRouter from './routes/roman.router.js';
 import { logger } from './utils/logger.js';
 import { register } from './utils/metrics.js';
 import { metricsMiddleware } from './middleware/metricsMiddleware.js';
+import { corsMiddleware } from './middleware/corsMiddleware.js';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(corsMiddleware);
 // Log each request
 app.use((req, _, next) => {
   logger.info(`${req.method} ${req.url}`);
