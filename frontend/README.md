@@ -52,7 +52,7 @@ roman-numerals-frontend/
 Below are the **primary libraries** used:
 
 - **[React](https://reactjs.org/)** (v18.x) – Core library for building the user interface.
-- **[React Spectrum](https://react-spectrum.adobe.com/) (Adobe)** – Provides accessible, themable UI components.
+- **[React Spectrum](https://react-spectrum.adobe.com/) (Adobe)** – Although my goto component library is MUI, React Spectrum was chosen to stay closer to the provided design, and I personally wanted to explore it further.
 - **[Axios](https://axios-http.com/)** – Handles HTTP requests to the backend.
 - **[Vite](https://vitejs.dev/)** – Fast dev server and build tool.
 - **[TypeScript](https://www.typescriptlang.org/)** – Adds static typing to JavaScript for better maintainability.
