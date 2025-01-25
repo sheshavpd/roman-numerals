@@ -1,6 +1,6 @@
 # Roman Numerals Backend
 
-This repository provides a RESTful API that converts integers to Roman numerals. It’s organized with a **service–controller–router** pattern in TypeScript, ensuring clear separation of concerns, testability, and maintainability.
+This repository provides a RESTful API that converts integers to [Roman numerals](https://en.wikipedia.org/wiki/Roman_numerals). It’s organized with a **service–controller–router** pattern in TypeScript, ensuring clear separation of concerns, testability, and maintainability.
 
 ---
 
