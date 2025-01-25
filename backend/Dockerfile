@@ -7,8 +7,6 @@ COPY . .
 RUN npm install
 RUN npm run build
 
-ARG PORT=3000
-ENV PORT=$PORT
-EXPOSE $PORT
+EXPOSE 3000
 
 CMD ["npm", "run", "start"]

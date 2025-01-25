@@ -11,7 +11,7 @@ This repository provides a RESTful API that converts integers to Roman numerals.
 3. [Installation & Setup](#installation--setup)
 4. [Project Scripts](#project-scripts)
 5. [Project Structure](#project-structure)
-6. [Engineering & Testing](#engineering--testing)
+6. [Engineering & Testing](#engineering--testing-methodology)
 7. [Dependencies & Attribution](#dependencies--attribution)
 8. [API Usage](#api-usage)
 9. [Production Readiness](#production-readiness)
@@ -20,7 +20,7 @@ This repository provides a RESTful API that converts integers to Roman numerals.
 
 ## Features
 
-- **Convert integers to Roman numerals** (1–3999) using an **Express.js** endpoint.
+- **Convert integers to Roman numerals** using an **Express.js** endpoint.
 - **Layered architecture**:
   - **Service Layer** (business logic for numeral conversion).
   - **Controller Layer** (request/response handling).
@@ -124,9 +124,7 @@ roman-numerals-backend/
 
 ---
 
-## Engineering & Testing
-
-### Methodology
+## Engineering & Testing Methodology
 
 1. **Layered Architecture** ensures each module has a single responsibility, improving maintainability and testability.
 2. **TypeScript** enforces type checking and helps catch errors early.
@@ -168,7 +166,7 @@ Key dependencies for this project:
 
 ### `GET /romannumeral?query={integer}`
 
-**Description**: Converts an integer (1–3999) to its Roman numeral.
+**Description**: Converts an integer to its Roman numeral.
 
 - **Query Param**: `query` (string) → must be a valid integer in the range 1–3999.
 - **Success (200)**:
